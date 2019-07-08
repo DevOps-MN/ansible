@@ -1,0 +1,8 @@
+- hosts: jenkins_master
+  gather_facts: True
+  become: yes
+  vars:
+    jenkins_hostname: "{{inventory_hostname}}"
+  roles:
+    - role: ansible-role-jenkins
+      become: yes
